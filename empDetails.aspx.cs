@@ -14,7 +14,7 @@ namespace EmployeeManagementSystem
     public partial class empDetails : System.Web.UI.Page
     {
         String eid, ename, des, no, emailId, eAdd, equali;
-        SqlConnection con = new SqlConnection("Server=199.79.62.22;uid=training;pwd=Training@786;database=cmp");
+        SqlConnection con = new SqlConnection("Server=SQL_SERVER_IP;uid=YOUR_UID;pwd=YOUR_PASSWORD;database=DB_NAME");
         protected void Button6_Click(object sender, EventArgs e)
         {
             Response.Redirect("empDetails.aspx");
