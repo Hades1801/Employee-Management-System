@@ -10,7 +10,7 @@ namespace EmployeeManagementSystem
 {
     public partial class fullDetails : System.Web.UI.Page
     {
-        SqlConnection con = new SqlConnection("Server=199.79.62.22;uid=training;pwd=Training@786;database=cmp");
+        SqlConnection con = new SqlConnection("Server=SQL_SERVER_IP;uid=YOUR_UID;pwd=YOUR_PASSWORD;database=DB_NAME");
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -42,11 +42,7 @@ namespace EmployeeManagementSystem
                     lbledes.Text = dr[4].ToString();
                     lblequal.Text = dr[6].ToString();
                     lblgen.Text = dr[8].ToString();
-                    //string sdate = dr[7].ToString();
 
-                    //DateTime ndate = new DateTime();
-                    //ndate = DateTime.ParseExact(sdate, "yyyy/MM/dd", null);
-                    //String date = ndate.ToString("dd/MM/yyyy");
                     DateTime sdate = (DateTime)dr[7];
                     string date = sdate.ToString("dd-MM-yyyy");
                     lbledob.Text = date;
