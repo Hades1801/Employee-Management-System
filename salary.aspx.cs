@@ -10,8 +10,8 @@ namespace EmployeeManagementSystem
 {
     public partial class salary : System.Web.UI.Page
     {
-        SqlConnection con = new SqlConnection("Server=199.79.62.22;uid=training;pwd=Training@786;database=cmp");
-        SqlConnection con1 = new SqlConnection("Server=199.79.62.22;uid=training;pwd=Training@786;database=cmp");
+        SqlConnection con = new SqlConnection("Server=SQL_SERVER_IP;uid=YOUR_UID;pwd=YOUR_PASSWORD;database=DB_NAME");
+        SqlConnection con1 = new SqlConnection("Server=SQL_SERVER_IP;uid=YOUR_UID;pwd=YOUR_PASSWORD;database=DB_NAME");
         static string workeddays, ename, edes;
         static int DailyBasic, total;
 
