@@ -14,8 +14,6 @@ namespace EmployeeManagementSystem
         {          
           
 
-
-
         }
         
 
@@ -34,9 +32,8 @@ namespace EmployeeManagementSystem
                 int length = fu.PostedFile.ContentLength;
                 byte[] empimg = new byte[length];
                 fu.PostedFile.InputStream.Read(empimg, 0, length);
-                SqlConnection con = new SqlConnection("Server=199.79.62.22;uid=training;pwd=Training@786;database=cmp");
+                SqlConnection con = new SqlConnection("Server=SQL_SERVER_IP;uid=YOUR_UID;pwd=YOUR_PASSWORD;database=DB_NAME");
                 SqlCommand cmd = new SqlCommand("insert into RMemployee values(@ename,@eId,@eNo,@Email,@eDes,@eAdd,@eQuali,@eDob,@eGen,@eimage)", con);
-                //SqlConnection con1 = new SqlConnection("Server=199.79.62.22;uid=training;pwd=Training@786;database=cmp");
                 SqlCommand cmmd = new SqlCommand("insert into RMattendance values(@eId,@days)", con);
                 cmd.Parameters.AddWithValue("@ename", txtename.Text);
                 cmd.Parameters.AddWithValue("@eId", txtId.Text);
@@ -56,15 +53,7 @@ namespace EmployeeManagementSystem
                 cmmd.ExecuteNonQuery();
                 con.Close();
                 Response.Write("<script>alert('Employee Details have been Successfully Recorded');</script>");
-                //string message = "Employee Details have been Successfully Recorded.";
-                //System.Text.StringBuilder sb = new System.Text.StringBuilder();
-                //sb.Append("<script type = 'text/javascript'>");
-                //sb.Append("window.onload=function(){");
-                //sb.Append("alert('");
-                //sb.Append(message);
-                //sb.Append("')};");
-                //sb.Append("</script>");
-                //ClientScript.RegisterClientScriptBlock(this.GetType(), "alert", sb.ToString());
+              
                 txtename.Text = " ";
                 txtId.Text = " ";
                 txteno.Text = " ";
