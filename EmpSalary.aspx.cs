@@ -10,8 +10,8 @@ namespace EmployeeManagementSystem
 {
     public partial class test : System.Web.UI.Page
     {
-        SqlConnection con = new SqlConnection("Server=199.79.62.22;uid=training;pwd=Training@786;database=cmp");
-        SqlConnection con1 = new SqlConnection("Server=199.79.62.22;uid=training;pwd=Training@786;database=cmp");
+        SqlConnection con = new SqlConnection("Server=SQL_SERVER_IP;uid=YOUR_UID;pwd=YOUR_PASSWORD;database=DB_NAME");
+        SqlConnection con1 = new SqlConnection("Server=SQL_SERVER_IP;uid=YOUR_UID;pwd=YOUR_PASSWORD;database=DB_NAME");
         static string workeddays, ename, edes;
         static int DailyBasic, total;
         protected void Page_Load(object sender, EventArgs e)
@@ -35,17 +35,7 @@ namespace EmployeeManagementSystem
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-           // total = DailyBasic * Convert.ToInt32(workeddays);
-
-           // lblsId.Text = ddlId.SelectedItem.Text;
-           // lblsname.Text = ename;
-           // lblsDes.Text = edes;
-           // lblsdays.Text = workeddays + " days";
-           // lblsSal.Text = total.ToString() + " Rs";
-           // Panel4.Visible = true;
-           // Button5.Visible = true;
-           // Panel5.Visible = false;
-           //// Panel2.Visible = false;
+          
         }
 
         protected void Button1_Click1(object sender, EventArgs e)
