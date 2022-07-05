@@ -23,7 +23,7 @@ namespace EmployeeManagementSystem
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection("Server=199.79.62.22;uid=training;pwd=Training@786;database=cmp");
+            SqlConnection con = new SqlConnection("Server=SQL_SERVER_IP;uid=YOUR_UID;pwd=YOUR_PASSWORD;database=DB_NAME");
             SqlCommand cmd = new SqlCommand("insert into RMadmin values(@n,@u,@em,@no,@gn,@dob,@pwd,@sqt,@sans)", con);
             cmd.Parameters.AddWithValue("@n", txtname.Text);
             cmd.Parameters.AddWithValue("@u", txtId.Text);
