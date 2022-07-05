@@ -19,7 +19,7 @@ namespace EmployeeManagementSystem
 
         protected void btmsubmit_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection("Server=199.79.62.22;uid=training;pwd=Training@786;database=cmp");
+            SqlConnection con = new SqlConnection("Server=SQL_SERVER_IP;uid=YOUR_UID;pwd=YOUR_PASSWORD;database=DB_NAME");
             SqlCommand cmd = new SqlCommand("select pwd,seqt,seqans,emailId from RMadmin where userId=@uid", con);
             cmd.Parameters.AddWithValue("uid", txtId.Text);
             con.Open();
@@ -56,15 +56,15 @@ namespace EmployeeManagementSystem
 
 
                 MailMessage msg = new MailMessage();
-                msg.From = new MailAddress("201902010.rolanddrt@student.xavier.ac.in"); //Sender address
+                msg.From = new MailAddress("YOUR_MAIL_ID"); //Sender address
                 msg.To.Add(eid); //Receiver address
-                msg.Subject = "Your Password of DeathNote Enterprises";
+                msg.Subject = "Your Password of COMPANY_NAME";
                 msg.Body = "The password of your Account is " + pwd;
 
                 SmtpClient smtp = new SmtpClient(); //used to send the mail
                 smtp.Host = "smtp.gmail.com";
                 smtp.Port = 587;
-                smtp.Credentials = new System.Net.NetworkCredential("201902010.rolanddrt@student.xavier.ac.in", "roland180102");
+                smtp.Credentials = new System.Net.NetworkCredential("YOUR_MAIL_ID", "YOUR_PASSWORD");
                 smtp.EnableSsl = true;
                 smtp.Send(msg);
 
