@@ -17,7 +17,7 @@ namespace EmployeeManagementSystem
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            string str = "Server=199.79.62.22;uid=training;pwd=Training@786;database=cmp";
+            string str = "Server=SQL_SERVER_IP;uid=YOUR_UID;pwd=YOUR_PASSWORD;database=DB_NAME";
             SqlConnection con = new SqlConnection(str);
             SqlCommand cmd = new SqlCommand("select pwd from RMadmin where userId=@uid", con);
             cmd.Parameters.AddWithValue("@uid", txtId.Text);
