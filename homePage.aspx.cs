@@ -15,7 +15,7 @@ namespace EmployeeManagementSystem
         protected void Page_Load(object sender, EventArgs e)
         {
             
-            SqlConnection con = new SqlConnection("Server=199.79.62.22;uid=training;pwd=Training@786;database=cmp");
+            SqlConnection con = new SqlConnection("Server=SQL_SERVER_IP;uid=YOUR_UID;pwd=YOUR_PASSWORD;database=DB_NAME");
             SqlCommand cmmd = new SqlCommand("select adName from RMadmin where userId=@uid", con);
             cmmd.Parameters.AddWithValue("uid", Session["userId"]);
             con.Open();
