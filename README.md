@@ -1,6 +1,6 @@
 # Employee-Management-System
 
-This is a Management System for the administrators of an Organization.
+This is a Management System for the administrators of an Organization.  
 The Login page is for creating new admin accounts or logging in existing admins along with Password Recovery via mail.  
 After logging in,an admin can   
 1)Add Employee details  
